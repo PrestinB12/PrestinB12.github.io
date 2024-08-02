@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- leaving blank for now-->
+    </head>
+    <body>
+        <h1>
+            Prestin Bell
+            <p>
+                Click me!
+            </p>
+            <button
+                onclick="showContent()">Show hidden content
+            </button>
+            <template>
+                <h2>
+                    Yosemite
+                </h2>
+                <img src="yos.jpg" widith="640" height="1280">
+            </template>
+        </h1>
+    </body>
+</html>
+<script>
+
+function showContent() {
+    // Get the content inside the template and append it to the body
+    const template = document.querySelector('template');
+    const clone = document.importNode(template.content, true);
+    document.body.appendChild(clone);
+    
+    // Optionally, remove the template to prevent duplicate content
+    template.remove();
+}
+/*
+    For saving state for future dark-mode on website toggle (coming soon)
+
+window.localStorage.setItem('settings.darkmode', "on")
+...
+const darkMode = ('on' === window.localStorage.getItem('settings.darkmode'));
+*/
+
+</script>
+
+<style>
+    
+   /* Simple styling to hide the content initially */
+ 
+.hidden-content {
+    display: none;
+}
+
+</style>
