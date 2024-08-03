@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Prestin Bell</h1>
-    <button onclick="calendar-button" onclick="goToCalendar()"></button>
+    <p><a href="calendar.html">Go to Calendar Page</a></p>
     <button onclick="showContent()">Show hidden content</button>
     
     <div id="hiddenContent">
@@ -36,10 +36,12 @@ function showContent() {
 window.localStorage.setItem('settings.darkmode', "on")
 ...
 const darkMode = ('on' === window.localStorage.getItem('settings.darkmode'));
-*/
+
+
 function goToCalendar() {
             window.location.href = 'calendar.html'; // Change this URL to match the path to your calendar page
         }
+        */
 </script>
 
 <style>
